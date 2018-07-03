@@ -13,3 +13,9 @@ serial  序列化，反序列化
 序列化，反序列化
 transient
 static
+
+-------------------------------------------------RMI
+
+RMI
+手写RPC框架
+https://github.com/Darian1996/Darian-All-Project/tree/master/
