@@ -11,6 +11,7 @@
   <modules>
     <module>protocol-socket</module>
       <module>Serial</module>
+      <module>RMI</module>
   </modules>
 
   <name>DarianProject</name>
