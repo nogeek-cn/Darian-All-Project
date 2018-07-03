@@ -16,6 +16,6 @@ static
 
 -------------------------------------------------RMI
 
-RMI
+jva_RMI
 手写RPC框架
 https://github.com/Darian1996/Darian-All-Project/tree/master/
