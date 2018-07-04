@@ -1,4 +1,4 @@
-package RPCServer;
+package RPC;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -34,21 +34,21 @@ public class ProcessorHandler implements Runnable {
             // 读取远程传输过来的对象 可以
             RpcRequest rpcRequest = (RpcRequest) objectInputStream.readObject();
 
+            //通过反射去调用本地的方法
             Object result = invoke(rpcRequest);
 
-            ObjectOutputStream  objectOutputStream =
+            //通过输出流讲结果输出给客户端
+            ObjectOutputStream objectOutputStream =
                     new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.writeObject(result);
 
             objectOutputStream.flush();
             objectOutputStream.close();
             objectInputStream.close();
-        } catch (IOException e) {
-
-        } catch (ClassNotFoundException e) {
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }finally {
-            if(objectInputStream!=null) {
+            if (objectInputStream != null) {
                 try {
                     objectInputStream.close();
                 } catch (IOException e) {
@@ -59,25 +59,15 @@ public class ProcessorHandler implements Runnable {
     }
 
     // 利用反射调用相应的方法
-    private Object invoke(RpcRequest request){
+    private Object invoke(RpcRequest request) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Object[] parameters = request.getParameters();
         Class<?>[] types = new Class[parameters.length];
-        for (int i = 0; i < parameters.length ; i++) {
-            types[i] = types[i].getClass();
+        for (int i = 0; i < parameters.length; i++) {
+            types[i] = parameters[i].getClass();
         }
 
-        try {
-            Method method = service.getClass().getMethod(request.getMethodName(),types);
-            return method.invoke(service, parameters);
+        Method method = service.getClass().getMethod(request.getMethodName(), types);
+        return method.invoke(service, parameters);
 
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } finally {
-        }
-        return null;
     }
 }

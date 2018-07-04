@@ -1,4 +1,4 @@
-package RPCServer;
+package RPC;
 
 import java.io.Serializable;
 

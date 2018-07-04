@@ -1,8 +1,7 @@
-package RPCClient;
+package RPC;
 
 
 import java.io.IOException;
-
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -50,11 +49,13 @@ public class TCPTransport {
             ObjectInputStream objectInputStream =
                     new ObjectInputStream(socket.getInputStream());
 
+            Object result = objectInputStream.readObject();
+
             // 两个流关闭掉
             objectInputStream.close();
             objectOutputStream.close();
 
-            Object result = objectInputStream.readObject();
+
             return result;
         } catch (Exception e) {
             throw new RuntimeException("发起远程调用异常：", e);

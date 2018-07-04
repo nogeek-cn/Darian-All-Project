@@ -1,4 +1,4 @@
-package RPCClient;
+package RPC;
 
 
 import java.lang.reflect.InvocationHandler;

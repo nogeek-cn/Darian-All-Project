@@ -1,4 +1,4 @@
-package RPCServer;
+package RPC;
 
 /**
  * <br>类说明 :
