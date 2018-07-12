@@ -13,6 +13,10 @@
       <module>Serial</module>
       <module>RMI</module>
       <module>RMIClient</module>
+      <module>APIzookeeper-curator</module>
+      <module>zookeeper-RPC</module>
+      <module>zookeeper-RPC-server</module>
+    <module>zookeeper-RPC-client</module>
   </modules>
 
   <name>DarianProject</name>
@@ -36,7 +40,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.16.2</version>
-      <scope>runtime</scope>
     </dependency>
   </dependencies>
 
