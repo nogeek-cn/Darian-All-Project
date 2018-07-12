@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
  **/
 public class RPCServer {
 
+    // 创建一个线程
     private static final ExecutorService executorService = Executors.newCachedThreadPool();
 
     public void publisher(final Object service, int port) {
