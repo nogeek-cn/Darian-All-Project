@@ -28,14 +28,17 @@ public class RemoteInvocationHandler implements InvocationHandler {
         // 建立一个传输
         RpcRequest request = new RpcRequest();
 
+        System.out.println("调用的方法的名字：" + method);
+
         request.setClassName(method.getDeclaringClass().getName());
         request.setMethodName(method.getName());
         request.setParameters(args);
 
+        System.out.println("要调用的接口的名字：" + request.getClassName());
         // 根据接口名称得到对应的服务地址
         String serviceAddress = iServiceDiscovery.discover(request.getClassName());
 
-     //   System.out.println("serviceAddress:" + serviceAddress);
+        //   System.out.println("serviceAddress:" + serviceAddress);
 
         TCPTransport tcpTransport = new TCPTransport(serviceAddress);
 

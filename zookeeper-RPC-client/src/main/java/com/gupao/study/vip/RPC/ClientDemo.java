@@ -14,7 +14,7 @@ public class ClientDemo {
     public static void main(String[] args) {
 
         IServiceDiscovery iServiceDiscovery = new
-                ServiceDiscoveryImpl(zkConfig.ZK_REGISTER_PATH);
+                ServiceDiscoveryImpl(zkConfig.CONNECTION_STRING);
 
         RpcclientProxy rpcclientProxy = new RpcclientProxy(iServiceDiscovery);
 

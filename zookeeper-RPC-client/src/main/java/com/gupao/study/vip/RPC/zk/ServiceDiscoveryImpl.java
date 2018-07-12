@@ -46,6 +46,9 @@ public class ServiceDiscoveryImpl implements IServiceDiscovery {
     public String discover(String serviceName) {
         // 先去根据当前的路径得到所有的节点,所有协议地址
         String path = zkConfig.ZK_REGISTER_PATH + "/" + serviceName;
+
+        System.out.println("服务在zookeeper上的地址：" + path);
+
         try {
             repos = curatorFramework.getChildren().forPath(path);
             // 如果服务端注册成功，我一定可以拿到两个地址
