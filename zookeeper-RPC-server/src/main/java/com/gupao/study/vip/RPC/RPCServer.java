@@ -43,6 +43,10 @@ public class RPCServer {
             RPCAnnotation annotation = serivce.getClass().getAnnotation(RPCAnnotation.class);
             // 服务的名称
             String serviceName = annotation.value().getName();
+            String version = annotation.version();
+            if (version != null && !"".equals(version)) {
+                serviceName = serviceName + "-" + version;
+            }
             // 绑定服务接口名称对应的服务
             handlerMap.put(serviceName, serivce);
         }

@@ -20,4 +20,6 @@ public @interface RPCAnnotation {
      * 对外发布服务的地址
      */
     Class<?> value();
+
+    String version() default "";
 }

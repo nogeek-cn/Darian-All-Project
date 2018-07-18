@@ -1,5 +1,7 @@
 package com.gupao.study.vip.RPC;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -11,6 +13,7 @@ import java.io.Serializable;
  *
  * <br>作者：Darian
  **/
+@Data
 public class RpcRequest implements Serializable {
 
     // 远程传输这个对象需要被序列化
@@ -20,29 +23,6 @@ public class RpcRequest implements Serializable {
     private String className;
     private String methodName;
     private Object[] parameters;
-    
+    private String version;
 
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
-    }
-
-    public Object[] getParameters() {
-        return parameters;
-    }
-
-    public void setParameters(Object[] parameters) {
-        this.parameters = parameters;
-    }
 }

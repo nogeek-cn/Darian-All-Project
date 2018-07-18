@@ -16,9 +16,11 @@ import java.lang.reflect.Method;
  **/
 public class RemoteInvocationHandler implements InvocationHandler {
     private IServiceDiscovery iServiceDiscovery;
+    private String version;
 
-    public RemoteInvocationHandler(IServiceDiscovery iServiceDiscovery) {
+    public RemoteInvocationHandler(IServiceDiscovery iServiceDiscovery,String version) {
         this.iServiceDiscovery = iServiceDiscovery;
+        this.version = version;
     }
 
     @Override
@@ -33,6 +35,7 @@ public class RemoteInvocationHandler implements InvocationHandler {
         request.setClassName(method.getDeclaringClass().getName());
         request.setMethodName(method.getName());
         request.setParameters(args);
+        request.setVersion(version);
 
         System.out.println("要调用的接口的名字：" + request.getClassName());
         // 根据接口名称得到对应的服务地址

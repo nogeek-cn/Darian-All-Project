@@ -56,5 +56,20 @@ zookeeper-RPC-Client
 locaBalance
 实现了负载均衡
 
+----------------------------------------------------
+
+dubbo分布式治理初探
+dubboClient 客户端
+dubboServer 服务端
+
+内部实现了随机负载均衡调用，
+
+实现了多协议支持
+
+注意：
+为文件夹格式，dubbboClient和DubboServer都是一个独立的项目
+
+
+
 
 

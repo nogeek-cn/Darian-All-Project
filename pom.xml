@@ -17,6 +17,9 @@
       <module>zookeeper-RPC</module>
       <module>zookeeper-RPC-server</module>
     <module>zookeeper-RPC-client</module>
+      <module>Dubbo-Client</module>
+    <module>Dubbo-Server</module>
+      <module>dubbo分布式服务治理初探</module>
   </modules>
 
   <name>DarianProject</name>

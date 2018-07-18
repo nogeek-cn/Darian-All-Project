@@ -1,6 +1,7 @@
 package com.gupao.study.vip.RPC;
 
 import com.gupao.study.vip.RPC.zk.IServiceDiscovery;
+import sun.misc.Version;
 
 import java.lang.reflect.Proxy;
 
@@ -17,15 +18,17 @@ public class RpcclientProxy {
         this.iServiceDiscovery = iServiceDiscovery;
     }
 
-    public <T> T clientProxy(final Class interfaceCls
-                           ){
+    public <T> T clientProxy(final Class interfaceCls,
+                           String version){
 
         System.out.println(interfaceCls);
         System.out.println(interfaceCls.getClassLoader());
 
+
+
         return (T)Proxy.newProxyInstance(
                 interfaceCls.getClassLoader(),
                 new Class[] {interfaceCls},
-                new RemoteInvocationHandler(iServiceDiscovery));
+                new RemoteInvocationHandler(iServiceDiscovery, version));
     }
 }
