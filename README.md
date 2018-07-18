@@ -50,6 +50,7 @@ curatorDemo
 
 zookeeper-RPC-server
 利用 zookeeper 实现简单的 RPC 框架 服务端
+
 zookeeper-RPC-Client
 利用 zookeeper 实现简单的 RPC 框架 客户端
 
@@ -59,8 +60,10 @@ locaBalance
 ----------------------------------------------------
 
 dubbo分布式治理初探
-dubboClient 客户端
-dubboServer 服务端
+
+分布式治理初探-dubboClient 客户端
+
+分布式治理初探-dubboServer 服务端
 
 内部实现了随机负载均衡调用，
 

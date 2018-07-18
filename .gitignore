@@ -1,9 +1,30 @@
-.settings
+# maven ignore
+target/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
 
-/.classpath
+# eclipse ignore
+.settings/
+.project
+.classpath
 
-/.project
-
+# idea ignore
+.idea/
+*.ipr
 *.iml
-*.idea
-/target/
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
