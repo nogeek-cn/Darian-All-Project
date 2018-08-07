@@ -1,13 +1,12 @@
-新建工程
-=====================================================
+# 新建工程
+
 2018.06.28
 
-#protocol-socket socket通信，UDP,TCP,TCP双向通道
+## protocol-socket socket通信，UDP,TCP,TCP双向通道
 
 https://github.com/Darian1996/Darian-All-Project/tree/master/protocol-socket/src/main/java/com/gupao/study/vip
 
------------------------------------------------------
-#serial  序列化，反序列化
+## serial  序列化，反序列化
 
 深度克隆，浅克隆
 序列化，反序列化
@@ -15,7 +14,7 @@ transient
 static
 
 -------------------------------------------------
-#RMI
+## RMI
 
 jva_RMI
 手写RPC框架
@@ -28,7 +27,7 @@ RMIClient
 序列化和反序列化的时候，包名和类型必须完全一样
 
 ---------------------------------------------------
-#APIzookeeper-curator
+## APIzookeeper-curator
 
 zookeeperAPI实现监听，增删改查，监听创建的事件。
 watcher事件的循环监听
@@ -37,7 +36,7 @@ watcher事件的循环监听
 
 ---------------------------------------------------
 
-#zookeeper-RPC
+## zookeeper-RPC
 
 DistributeLock
   利用zookeeper 的 API 实现了分布式锁
@@ -59,7 +58,7 @@ locaBalance
 
 ----------------------------------------------------
 
-#dubbo分布式治理初探
+## dubbo分布式治理初探
 
 分布式治理初探-dubboClient 客户端
 

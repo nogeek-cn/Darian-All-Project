@@ -20,6 +20,7 @@
       <module>Dubbo-Client</module>
     <module>Dubbo-Server</module>
       <module>dubbo分布式服务治理初探</module>
+      <module>lombda表达式demo</module>
   </modules>
 
   <name>DarianProject</name>
