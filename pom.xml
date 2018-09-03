@@ -17,20 +17,27 @@
       <module>zookeeper-RPC</module>
       <module>zookeeper-RPC-server</module>
     <module>zookeeper-RPC-client</module>
-      <module>Dubbo-Client</module>
-    <module>Dubbo-Server</module>
-      <module>dubbo分布式服务治理初探</module>
       <module>lombda表达式demo</module>
+    <module>小马哥-java8-异步编程</module>
+      <module>小马哥-spring-Cloud-config-client</module>
+      <module>平时代码总结</module>
   </modules>
 
   <name>DarianProject</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.8.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -81,5 +88,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>

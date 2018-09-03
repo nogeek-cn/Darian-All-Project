@@ -24,5 +24,7 @@ public class 复制不同的值_创建一个子列表_9 {
                 .distinct()
                 .collect(Collectors.toList());
         System.out.printf("Original List : %s,  Square Without duplicates : %s %n", numbers, distinct);
+
+
     }
 }
