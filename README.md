@@ -75,6 +75,6 @@ locaBalance
 ## lombda表达式
 lombda表达式的demo
 
-\<center\>居中显示\</center\>1
+\<center\>这是要居中的文本内容\</center\>1
 
 
